@@ -1,0 +1,16 @@
+package resources;
+
+import java.util.List;
+
+public class VariablesForTests {
+    // Переменные для класса `Feline`
+        // Переменные для тестов метода `eatMeat`
+        public static final String PREDATOR_VALUE = "Хищник";
+        public static final List<String> PREDATOR_FOOD_LIST = List.of("Животные", "Птицы", "Рыба");
+
+    // Переменные для тестов метода `getFamily`
+    public static final String FELINE_FAMILY_VALUE = "Кошачьи";
+
+    // Переменные для тестов метода `getKittens`
+    public static final int DEFAULT_KITTENS_COUNT = 1;
+}
