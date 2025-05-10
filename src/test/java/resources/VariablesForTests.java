@@ -8,9 +8,13 @@ public class VariablesForTests {
         public static final String PREDATOR_VALUE = "Хищник";
         public static final List<String> PREDATOR_FOOD_LIST = List.of("Животные", "Птицы", "Рыба");
 
-    // Переменные для тестов метода `getFamily`
-    public static final String FELINE_FAMILY_VALUE = "Кошачьи";
+        // Переменные для тестов метода `getFamily`
+        public static final String FELINE_FAMILY_VALUE = "Кошачьи";
 
-    // Переменные для тестов метода `getKittens`
-    public static final int DEFAULT_KITTENS_COUNT = 1;
+        // Переменные для тестов метода `getKittens`
+        public static final int DEFAULT_KITTENS_COUNT = 1;
+
+    // Переменные для класса `Cat`
+    // Переменные для тестов метода `getSound`
+    public static final String CAT_SOUND_VALUE = "Мяу";
 }
