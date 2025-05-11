@@ -19,14 +19,14 @@ public class GetKittensTest extends LionBase {
     }
 
     @Test
-    public void getFoodShouldReturnStubbedValue() {
+    public void getKittensShouldReturnStubbedValue() {
         when(feline.getKittens())
                 .thenReturn(DEFAULT_KITTENS_COUNT);
         assertEquals(DEFAULT_KITTENS_COUNT, lion.getKittens());
     }
 
     @Test
-    public void getFoodShouldReturnExpectedValue() throws Exception {
+    public void getKittensShouldReturnExpectedValue() throws Exception {
         //Создаётся "шпион" класса `Feline` вместо стандартного мока
         feline = spy(new Feline());
         lion = new Lion(feline, LION_DEFAULT_TEST_SEX);

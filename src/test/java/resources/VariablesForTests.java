@@ -23,4 +23,11 @@ public class VariablesForTests {
         // Переменные для тестов конструктора
         public static final String SEX_EXCEPTION_MESSAGE = "Используйте допустимые значения пола животного - самец или самка";
 
+    // Переменные для класса `Alex`
+        // Переменные для тестов метода `getKittens`
+        public static final int ALEX_DEFAULT_KITTENS_COUNT = 0;
+        // Переменные для тестов метода `getFriends`
+        public static final List<String> ALEX_FRIENDS_LIST = List.of("Марти", "Глория", "Мелман");
+        // Переменные для тестов метода `getPlaceOfLiving`
+        public static final String ALEX_PLACE_OF_LIVING = "Нью-Йоркский зоопарк";
 }
