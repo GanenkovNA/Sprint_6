@@ -15,6 +15,12 @@ public class VariablesForTests {
         public static final int DEFAULT_KITTENS_COUNT = 1;
 
     // Переменные для класса `Cat`
-    // Переменные для тестов метода `getSound`
-    public static final String CAT_SOUND_VALUE = "Мяу";
+        // Переменные для тестов метода `getSound`
+        public static final String CAT_SOUND_VALUE = "Мяу";
+
+    // Переменные для класса `Lion`
+        public static final String LION_DEFAULT_TEST_SEX = "Самец";
+        // Переменные для тестов конструктора
+        public static final String SEX_EXCEPTION_MESSAGE = "Используйте допустимые значения пола животного - самец или самка";
+
 }
