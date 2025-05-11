@@ -12,14 +12,14 @@ import static resources.VariablesForTests.LION_DEFAULT_TEST_SEX;
 public class GetKittensTest extends LionBase {
 
     @Test
-    public void getKittensShouldCallGetKittens() throws Exception {
+    public void getKittensShouldCallGetKittens() {
         lion.getKittens();
         verify(feline, times(1))
                 .getKittens();
     }
 
     @Test
-    public void getFoodShouldReturnStubbedValue() throws Exception {
+    public void getFoodShouldReturnStubbedValue() {
         when(feline.getKittens())
                 .thenReturn(DEFAULT_KITTENS_COUNT);
         assertEquals(DEFAULT_KITTENS_COUNT, lion.getKittens());

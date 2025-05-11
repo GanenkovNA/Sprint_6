@@ -38,7 +38,7 @@ public class HaveManeParamTest extends LionBase {
     }
 
     @Test
-    public void HaveManeMaleTest() throws Exception {
+    public void HaveManeMaleTest() {
         assertEquals(isMale, lion.doesHaveMane());
     }
 }
