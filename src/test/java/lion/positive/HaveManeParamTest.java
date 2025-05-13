@@ -1,5 +1,6 @@
 package lion.positive;
 
+import com.example.Feline;
 import com.example.Lion;
 import lion.LionBase;
 import org.junit.Before;
@@ -33,7 +34,7 @@ public class HaveManeParamTest extends LionBase {
 
     @Before
     public void createLionObject() throws Exception {
-        //feline = mock(Feline.class);
+        feline = mock(Feline.class);
         lion = new Lion(feline, lionSex);
     }
 

@@ -1,8 +1,8 @@
-package alex;
+package alex.positive;
 
+import alex.AlexBase;
 import com.example.Alex;
 import com.example.Feline;
-import com.example.Lion;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

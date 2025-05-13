@@ -1,5 +1,6 @@
-package alex;
+package alex.positive;
 
+import alex.AlexBase;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
