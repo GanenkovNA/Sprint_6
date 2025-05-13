@@ -1,6 +1,7 @@
-package feline;
+package feline.positive;
 
 import com.example.Feline;
+import feline.FelineBase;
 import org.junit.Test;
 
 import java.util.List;

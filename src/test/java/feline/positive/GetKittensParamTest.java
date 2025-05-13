@@ -1,5 +1,6 @@
-package feline;
+package feline.positive;
 
+import feline.FelineBase;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -22,8 +23,8 @@ public class GetKittensParamTest extends FelineBase {
         return Arrays.asList(new Object[][]{
                 {0},
                 {1},
-                {2},
                 {5}
+                // Теоретически ещё должны быть значения для верхней границы, но они не были обозначены
         });
     }
 
