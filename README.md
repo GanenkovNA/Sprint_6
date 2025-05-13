@@ -5,6 +5,6 @@
 * `Mockito Core 5.17.0`
 * `JUnit 4.13.2`
 * `JaCoCo :: Maven Plugin 0.8.13`
+* `Project Lombok 1.18.38`
 
-
-
+Дополнительно к заданию были написаны негативные тесты для классов `Cat` и `Feline`.
