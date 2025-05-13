@@ -11,14 +11,14 @@ public class AlexConstructorTest extends AlexBase {
 
     @Before
     public void createAlexObject () {
-        // Переопределение метода `@Before`, чтобы не создавались объект `Alex` и `Feline`
+        // Переопределение метода `@Before`, чтобы не создавались объекты `Alex` и `Feline`
     }
 
     @Test
-    public void alexConstructorShouldThrowsExceptionWhenFelineIsNull() throws Exception {
+    public void alexConstructorShouldThrowsExceptionWhenFelineIsNull() {
         assertThrows(
                 NullPointerException.class,
-                () -> {new Alex(feline);}
+                () -> new Alex(feline)
         );
     }
 

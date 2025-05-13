@@ -19,19 +19,20 @@ public class LionConstructorTest extends LionBase {
     }
 
     @Test
-    public void lionConstructorShouldThrowsExceptionWhenFelineIsNull () throws Exception {
-        assertThrows(NullPointerException.class, () -> {
-            new Lion(null, "Самец");
-        });
+    public void lionConstructorShouldThrowsExceptionWhenFelineIsNull () {
+        assertThrows(
+                NullPointerException.class,
+                () -> new Lion(null, "Самец")
+        );
     }
 
     @Test
-    public void lionConstructorShouldThrowsExceptionForInvalidSex() throws Exception {
+    public void lionConstructorShouldThrowsExceptionForInvalidSex() {
         feline = mock(Feline.class);
 
         Exception exception = assertThrows(
                 Exception.class,
-                () -> {new Lion(feline, "UNKNOWN SEX");}
+                () -> new Lion(feline, "UNKNOWN SEX")
         );
 
         assertEquals(SEX_EXCEPTION_MESSAGE, exception.getMessage());

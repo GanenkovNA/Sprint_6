@@ -1,5 +1,6 @@
-package cat;
+package cat.positive;
 
+import cat.CatBase;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

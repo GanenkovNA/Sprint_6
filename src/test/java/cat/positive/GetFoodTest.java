@@ -1,5 +1,6 @@
-package cat;
+package cat.positive;
 
+import cat.CatBase;
 import com.example.Cat;
 import com.example.Feline;
 import org.junit.Test;
