@@ -1,11 +1,9 @@
 package com.example;
 
-import lombok.NonNull;
-
 import java.util.List;
 
 public class Alex extends Lion {
-    public Alex(@NonNull Feline feline) throws Exception {
+    public Alex(Feline feline) throws Exception {
         super(feline, "Самец");
     }
 
