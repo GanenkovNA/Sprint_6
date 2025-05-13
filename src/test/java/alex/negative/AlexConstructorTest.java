@@ -3,14 +3,11 @@ package alex.negative;
 import alex.AlexBase;
 import com.example.Alex;
 import org.junit.Before;
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.ExpectedException;
+
+import static org.junit.Assert.assertThrows;
 
 public class AlexConstructorTest extends AlexBase {
-
-    @Rule
-    public ExpectedException exceptionRule = ExpectedException.none();
 
     @Before
     public void createAlexObject () {
@@ -19,8 +16,10 @@ public class AlexConstructorTest extends AlexBase {
 
     @Test
     public void alexConstructorShouldThrowsExceptionWhenFelineIsNull() throws Exception {
-        exceptionRule.expect(Exception.class);
-        new Alex(feline);
+        assertThrows(
+                NullPointerException.class,
+                () -> {new Alex(feline);}
+        );
     }
 
 

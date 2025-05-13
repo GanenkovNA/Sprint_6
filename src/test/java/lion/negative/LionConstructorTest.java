@@ -4,17 +4,14 @@ import com.example.Feline;
 import com.example.Lion;
 import lion.LionBase;
 import org.junit.Before;
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.ExpectedException;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
 import static org.mockito.Mockito.mock;
 import static resources.VariablesForTests.SEX_EXCEPTION_MESSAGE;
 
 public class LionConstructorTest extends LionBase {
-
-    @Rule
-    public ExpectedException exceptionRule = ExpectedException.none();
 
     @Before
     public void createLionObject(){
@@ -23,16 +20,20 @@ public class LionConstructorTest extends LionBase {
 
     @Test
     public void lionConstructorShouldThrowsExceptionWhenFelineIsNull () throws Exception {
-        exceptionRule.expect(Exception.class);
-        new Lion(feline, "Самец");
+        assertThrows(NullPointerException.class, () -> {
+            new Lion(null, "Самец");
+        });
     }
 
     @Test
     public void lionConstructorShouldThrowsExceptionForInvalidSex() throws Exception {
         feline = mock(Feline.class);
 
-        exceptionRule.expect(Exception.class);
-        exceptionRule.expectMessage(SEX_EXCEPTION_MESSAGE);
-        new Lion(feline, "UNKNOWN SEX");
+        Exception exception = assertThrows(
+                Exception.class,
+                () -> {new Lion(feline, "UNKNOWN SEX");}
+        );
+
+        assertEquals(SEX_EXCEPTION_MESSAGE, exception.getMessage());
     }
 }
