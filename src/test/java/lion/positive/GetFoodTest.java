@@ -1,14 +1,15 @@
-package lion;
+package lion.positive;
 
 import com.example.Feline;
 import com.example.Lion;
+import lion.LionBase;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 import static resources.VariablesForTests.*;
 
-public class GetFoodTest extends LionBase{
+public class GetFoodTest extends LionBase {
 
     //Проверка вызова метода `eatMeat` класса `Feline`
     @Test

@@ -1,7 +1,7 @@
-package lion;
+package lion.positive;
 
-import com.example.Feline;
 import com.example.Lion;
+import lion.LionBase;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
