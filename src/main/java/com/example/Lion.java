@@ -1,5 +1,7 @@
 package com.example;
 
+import lombok.NonNull;
+
 import java.util.List;
 
 public class Lion {
@@ -7,7 +9,7 @@ public class Lion {
     boolean hasMane;
     Feline feline;
 
-    public Lion(Feline feline, String sex) throws Exception {
+    public Lion(@NonNull Feline feline, String sex) throws Exception {
         this.feline = feline;
 
         if ("Самец".equals(sex)) {
