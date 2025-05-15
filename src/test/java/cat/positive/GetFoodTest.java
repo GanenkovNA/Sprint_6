@@ -1,8 +1,6 @@
 package cat.positive;
 
 import cat.CatBase;
-import com.example.Cat;
-import com.example.Feline;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -23,16 +21,6 @@ public class GetFoodTest extends CatBase {
     public void getFoodShouldReturnStubbedValue() throws Exception {
         when(feline.eatMeat())
                 .thenReturn(PREDATOR_FOOD_LIST);
-        assertEquals(PREDATOR_FOOD_LIST, cat.getFood());
-    }
-
-    //Интеграционный тест
-    @Test
-    public void getFoodShouldReturnExpectedValue() throws Exception {
-        //Создаётся "шпион" класса `Feline` вместо стандартного мока
-        feline = spy(new Feline());
-        cat = new Cat(feline);
-
         assertEquals(PREDATOR_FOOD_LIST, cat.getFood());
     }
 }

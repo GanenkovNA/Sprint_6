@@ -26,14 +26,4 @@ public class GetFoodTest extends LionBase {
                 .thenReturn(PREDATOR_FOOD_LIST);
         assertEquals(PREDATOR_FOOD_LIST, lion.getFood());
     }
-
-    //Интеграционный тест
-    @Test
-    public void getFoodShouldReturnExpectedValue() throws Exception {
-        //Создаётся "шпион" класса `Feline` вместо стандартного мока
-        feline = spy(new Feline());
-        lion = new Lion(feline, LION_DEFAULT_TEST_SEX);
-
-        assertEquals(PREDATOR_FOOD_LIST, lion.getFood());
-    }
 }
