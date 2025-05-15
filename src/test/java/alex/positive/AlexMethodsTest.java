@@ -1,16 +1,21 @@
 package alex.positive;
 
 import alex.AlexBase;
-import com.example.Alex;
-import com.example.Feline;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 import static resources.VariablesForTests.*;
 
-public class GetKittensTest extends AlexBase {
+public class AlexMethodsTest extends AlexBase {
 
+    // Тест метода `getFriends`
+    @Test
+    public void getFriendsShouldReturnExpectedListOfFriends () {
+        assertEquals(ALEX_FRIENDS_LIST, alex.getFriends());
+    }
+
+    // Тесты метода `getKittens`
     // Контрактный тест
     @Test
     public void getKittensShouldCallGetKittens() {
@@ -27,13 +32,9 @@ public class GetKittensTest extends AlexBase {
         assertEquals(ALEX_DEFAULT_KITTENS_COUNT, alex.getKittens());
     }
 
-    // Интеграционный тест
+    // Тест метода `getPlaceOfLiving`
     @Test
-    public void getKittensShouldReturnExpectedValue() throws Exception {
-        //Создаётся "шпион" класса `Feline` вместо стандартного мока
-        feline = spy(new Feline());
-        alex = new Alex(feline);
-
-        assertEquals(ALEX_DEFAULT_KITTENS_COUNT, alex.getKittens());
+    public void getPlaceOfLivingShouldReturnExpectedString () {
+        assertEquals(ALEX_PLACE_OF_LIVING, alex.getPlaceOfLiving());
     }
 }
