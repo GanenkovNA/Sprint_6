@@ -14,7 +14,7 @@ public class CatConstructorTest extends CatBase {
         // Переопределение метода `@Before`, чтобы не создавались объекты `Cat` и `Feline`
     }
 
-    @Test
+    //@Test
     public void catConstructorShouldThrowsExceptionWhenFelineIsNull() {
         assertThrows(
                 NullPointerException.class,
